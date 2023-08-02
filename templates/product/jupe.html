@@ -1,0 +1,48 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+  <div class="titre"> <h1>Longue Jupe</h1></div>
+
+  <section class="row">
+    {% for jupelongue in jupelongues %}
+
+    <div class="card col-3 carte" >
+      <img src="{{jupelongue.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{jupelongue.nom}}</h5>
+        <p class="card-text">{{jupelongue.description}}</p>
+        <a  href="{% url 'jupelongue'  jupelongue.id %} " class="btn btn-success">acheté</a>
+         <a  href="{% url 'infodetail12' jupelongue.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+  <div class="titre"><h1>Courte Jupe</h1></div>
+
+  <section class="row">
+    {% for jupecourte in jupecourtes %}
+
+    <div class="card col-xs-6 carte" >
+      <img src="{{jupecourte.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{jupecourte.nom}}</h5>
+        <p class="card-text">{{jupecourte.description}}</p>
+        <a  href="{% url 'jupecourte' jupecourte.id %} " class="btn btn-success">acheté</a>
+         <a  href="{% url 'infodetail13' jupecourte.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+{% endblock content %}

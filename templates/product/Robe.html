@@ -1,0 +1,115 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+   <div class="titre"><h1>Robe boheme</h1></div>
+
+  <section class="row">
+    {% for robeboheme in robebohemes %}
+
+    <div class="card  col-lg-4 col-xl-3    carte" >
+      <img src="{{robeboheme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{robeboheme.nom}}</h5>
+        <p class="card-text">{{robeboheme.description}}</p>
+        <a  href="{% url 'robeboheme' robeboheme.id  %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetailrobe' robeboheme.id  %} " class="btn btn-light">voir</a>
+
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+     <div class="titre">  <h1>Robe courte</h1></div>
+
+  <section class="row">
+    {% for robecourte in robecourtes %}
+
+    <div class="card col-sm-4 carte" >
+      <img src="{{robecourte.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{robecourte.nom}}</h5>
+        <p class="card-text">{{robecourte.description}}</p>
+        <a  href="{% url 'Robe' robecourte.id %} " class="btn btn-success">acheté</a>
+         <a  href="{% url 'infodetail19' robecourte.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+   <div class="titre"> <h1>Robe Simple</h1></div>
+
+  <section class="row">
+    {% for robesimple in robesimples %}
+
+    <div class="card col-sm-4 carte" >
+      <img src="{{robesimple.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{robesimple.nom}}</h5>
+        <p class="card-text">{{robesimple.description}}</p>
+        <a  href="{% url 'robesimple'  robesimple.id %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail20' robesimple.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+   <div class="titre"> <h1>Robe Soirée</h1></div>
+
+  <section class="row">
+    {% for robesoiree in robesoirees %}
+
+    <div class="card col-sm-4 carte" >
+      <img src="{{robeboheme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{robesoiree.nom}}</h5>
+        <p class="card-text">{{robesoiree.description}}</p>
+        <a  href="{% url 'robesoiree'  robesoiree.id %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail21' robesoiree.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+    <div class="titre">   <h1>Robe Longue</h1></div>
+
+  <section class="row">
+    {% for robelongue in robelongues %}
+
+    <div class="card col-sm-4 carte" >
+      <img src="{{robelongue.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{robelongue.nom}}</h5>
+        <p class="card-text">{{robelongue.description}}</p>
+        <a  href="{% url 'robelongue'  robelongue.id %} " class="btn btn-success">acheté</a>
+       <a  href="{% url 'infodetail22' robelongue.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+{% endblock content %}

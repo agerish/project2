@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="carousel/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="{%  static 'bootstrap\css\bootstrap.min.css' %}">
+
+<link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    {% include 'style.html' %}
+
+    <title>Nos Produitst</title>
+</head>
+<body  class="container">
+ <header id="header" class=" container-fluid fixed-top">
+    <div class="container-fluid d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Dress_shop</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="/">Accueil</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a  href="{% url 'product' %}">Produits</a></li>
+            <li><a href="{% url 'event' %}">Evenement</a></li>
+
+          <li><a href="{% url 'contactus' %}">Contact</a></li>
+           <li><a href="{% url 'top' %}">Toptop</a></li>
+           <li><a href="{% url 'trainer' %}">Nos partenaires</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <form role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" name='search'>
+      </form>
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+
+
+
+
+
+
+
+
+ <div style=" display:flex;
+    justify-content:center;
+    margin-top:5rem;
+    color:blue;
+    box-shadow:2px 3px 6px pink;
+    background-color:white;"><h1>Liste des produits</h1></div>
+   
+<div class="   d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+    <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px" data-bs-theme="light">
+      <ul class="list-unstyled mb-0">
+        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Robe' %}">
+          <span class="d-inline-block bg-success rounded-circle p-1"></span>
+          Robe
+        </a></li>
+        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Perique' %}">
+          <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+          Perique
+        </a></li>
+        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Accessoires' %}">
+          <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+          accessoire
+        </a></li>
+        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'T-shirts' %}">
+          <span class="d-inline-block bg-info rounded-circle p-1"></span>
+          T-shirt
+        </a></li>
+        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Hauts' %}">
+            <span class="d-inline-block bg-info rounded-circle p-1"></span>
+            Les hauts
+          </a></li>
+          <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Sandals' %}">
+            <span class="d-inline-block bg-info rounded-circle p-1"></span>
+            Sandals
+          </a></li>
+          <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Baskets' %}">
+            <span class="d-inline-block bg-info rounded-circle p-1"></span>
+            Basket
+          </a></li>
+          <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Bijoux' %}">
+            <span class="d-inline-block bg-info rounded-circle p-1"></span>
+            Bijoux
+          </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'Jupe' %}">
+            <span class="d-inline-block bg-info rounded-circle p-1"></span>
+            Jupe
+          </a></li>
+          </a></li>
+      </ul>
+    </div>
+
+      <script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+
+
+  <script src="{% static 'assets/js/main1.js' %}"></script>
+
+
+
+
+
+
+    
+ </body>
+</html>

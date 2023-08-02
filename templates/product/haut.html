@@ -1,0 +1,48 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+   <div class="titre"><h1>Haut pour homme</h1></div>
+
+  <section class="row">
+    {% for hauthomme in hautshomme %}
+
+    <div class="card col-3 carte" >
+      <img src="{{hauthomme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{hauthomme.nom}}</h5>
+        <p class="card-text">{{hauthomme.description}}</p>
+        <a  href="{% url 'hauthomme' hauthomme.id  %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail10' hauthomme.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+  <div class="titre"> <h1>Hauts pour Femmes</h1></div>
+
+  <section class="row">
+    {% for hautfemme in hautsfemme %}
+
+    <div class="card col-xs-6 carte" >
+      <img src="{{hautfemme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{hautfemme.nom}}</h5>
+        <p class="card-text">{{hautfemme.description}}</p>
+        <a  href="{% url 'hautfemme' hautfemme.id %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail11' hautfemme.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+{% endblock content %}

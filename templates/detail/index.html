@@ -1,0 +1,39 @@
+{% extends "bas.html" %}
+
+ 
+{% block content %}
+<main class="container-fluid containere">
+  <section class="row">
+    {% for habit in habits %}
+    
+    <div class="card col-3 carte" >
+      <img src="{{habit.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{habit.nom}}</h5>
+        <p class="card-text">{{habit.description}}</p>
+        <a  href="{% url 'detail' habit.id %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail' habit.id %} " class="btn btn-success">info</a>
+
+      </div>
+    </div>
+    
+    {% endfor %}
+
+  </section>
+
+
+
+
+</main>
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+   

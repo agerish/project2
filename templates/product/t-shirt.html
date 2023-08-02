@@ -1,0 +1,79 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+    <div class="titre">  <h1>T-Shirt pour Mixte</h1></div>
+
+  <section class="row">
+    {% for t_shirt in t_shirts %}
+
+    <div class="card col-3 carte" >
+      <img src="{{t_shirt.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{t_shirt.nom}}</h5>
+        <p class="card-text">{{t_shirt.description}}</p>
+        <a  href="{% url 'tshirt'  t_shirt.id%} " class="btn btn-success">acheté</a>
+        <button type="button" class="btn btn-outline-info">Info</button>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+  <div class="titre">  <h1>T-Shirt pour Femmes</h1></div>
+  <section class="row">
+    {% for t_shirt_femme in t_shirts_femme %}
+
+    <div class="card col-3 carte" >
+      <img src="{{t_shirt_femme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{t_shirt_femme.nom}}</h5>
+        <p class="card-text">{{t_shirt_femme.description}}</p>
+        <a  href="{% url 'tshirtfemme' t_shirt_femme.id %} " class="btn btn-success">acheté</a>
+        <button type="button" class="btn btn-outline-info">Info</button>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+  <div class="titre">  <h1>T-Shirt pour Hommes</h1></div>
+
+  <section class="row">
+    {% for t_shirt_homme in t_shirts_homme %}
+
+    <div class="card col-xs-6 carte" >
+      <img src="{{t_shirt_homme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{t_shirt_homme.nom}}</h5>
+        <p class="card-text">{{t_shirt_homme.description}}</p>
+        <a  href="{% url 'tshirthomme'  t_shirt_homme.id%} " class="btn btn-success">acheté</a>
+        <button type="button" class="btn btn-outline-info">Info</button>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+
+
+
+
+{% endblock content %}

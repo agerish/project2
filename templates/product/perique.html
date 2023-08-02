@@ -1,0 +1,114 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+   <div class="titre">  <h1>Perique naturel</h1></div>
+
+  <section class="row">
+    {% for periquenaturel in periquenaturels %}
+
+    <div class="card col-3 carte" >
+      <img src="{{periquenaturel.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{periquenaturel.nom}}</h5>
+        <p class="card-text">{{periquenaturel.description}}</p>
+        <a  href="{% url 'periquenaturel'  periquenaturel.id %} " class="btn btn-success">acheté</a>
+          <a  href="{% url 'infodetail14' periquenaturel.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+     <div class="titre"><h1>Perique Humain Haire</h1></div>
+
+  <section class="row">
+    {% for periquehumainhair in periquehumainhairs %}
+
+    <div class="card col-3 carte" >
+      <img src="{{periquehumainhair.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{periquehumainhair.nom}}</h5>
+        <p class="card-text">{{periquehumainhair.description}}</p>
+        <a  href="{% url 'periquehumainhair' periquehumainhair.id  %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail15' periquehumainhair.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+  <div class="titre"><h1>Perique Synthetique</h1></div>
+
+  <section class="row">
+    {% for periquesinthetique in periquesinthetiques %}
+
+    <div class="card col-3 carte" >
+      <img src="{{periquesinthetique.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{periquesinthetique.nom}}</h5>
+        <p class="card-text">{{periquesinthetique.description}}</p>
+        <a  href="{% url 'periquesinthetique'  periquesinthetique.id %} " class="btn btn-success">acheté</a>
+   <a  href="{% url 'infodetail16' periquesinthetique.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+    <div class="titre"><h1>Perique Bresiliene </h1></div>
+
+  <section class="row">
+    {% for periquebresilienne in periquebresiliennes %}
+
+    <div class="card col-xs-6 carte" >
+      <img src="{{periquebresilienne.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{periquebresilienne.nom}}</h5>
+        <p class="card-text">{{periquebresilienne.description}}</p>
+        <a  href="{% url 'Perique' periquebresilienne.id  %} " class="btn btn-success">acheté</a>
+       <a  href="{% url 'infodetail17' periquebresilienne.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+<main class="container-fluid containere">
+     <div class="titre"> <h1>Perique Peruvienne</h1></div>
+
+  <section class="row">
+    {% for periqueperuvienne in periqueperruviennes %}
+
+    <div class="card col-3 carte" >
+      <img src="{{periqueperuvienne.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{periqueperuvienne.nom}}</h5>
+        <p class="card-text">{{periqueperuvienne.description}}</p>
+        <a  href="{% url 'periqueperuvienne'  periqueperuvienne.id %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail18' periqueperuvienne.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+{% endblock content %}

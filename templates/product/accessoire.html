@@ -1,0 +1,81 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+  <div class="titre"> <h1 >Accessoire de mode</h1></div>
+  <section class="row">
+    {% for accesoire_de_mode in accesoire_de_modes %}
+
+    <div class="card col-xs-6 carte" >
+      <img src="{{accesoire_de_mode.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{accesoire_de_mode.nom}}</h5>
+        <p class="card-text">{{accesoire_de_mode.description}}</p>
+        <a  href="{% url 'Accessoires' %} " class="btn btn-success">acheté</a>
+         <a  href="{% url 'C' accesoire_de_mode.id %} " class="btn btn-warning">info</a>
+
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+  <div class="titre">  <h1>Accessoire de meuble</h1> </div>
+
+  <section class="row">
+    {% for accessoire_de_meuble in accessoire_de_meubles %}
+
+    <div class="card col-3 carte" >
+      <img src="{{accessoire_de_meuble.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{accessoire_de_meuble.nom}}</h5>
+        <p class="card-text">{{accessoire_de_meuble.description}}</p>
+        <a  href="{% url 'Accessoires' %} " class="btn btn-success">acheté</a>
+         <a  href="{% url 'B' accessoire_de_meuble.id %} " class="btn btn-light">info</a>
+
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+ <div class="titre"> <h1>Appareil electronique</h1></div>
+
+  <section class="row">
+    {% for Machines_electronique in Machines_electroniques %}
+
+    <div class="card col-3 carte" >
+      <img src="{{sandal_homme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{Machines_electronique.nom}}</h5>
+        <p class="card-text">{{Machines_electronique.description}}</p>
+        <a  href="{% url 'Accessoires' %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'A' Machines_electronique.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,79 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+  <div class="titre"><h1>Sandals  Mixte</h1></div>
+
+  <section class="row">
+    {% for sandale in sandals %}
+
+    <div class="card col-xs-6 carte" >
+      <img src="{{sandale.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{sandale.nom}}</h5>
+        <p class="card-text">{{sandale.description}}</p>
+        <a  href="{% url 'SandalDetail'  sandale.id %} " class="btn btn-success">acheté</a>
+       <a  href="{% url 'infodetail23' sandale.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+    <div class="titre">     <h1>Sandals pour Femmes</h1></div>
+  <section class="row">
+    {% for sandal_femme in sandals_femme %}
+
+    <div class="card col-3 carte" >
+      <img src="{{sandal_femme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{sandal_femme.nom}}</h5>
+        <p class="card-text">{{sandal_femme.description}}</p>
+        <a  href="{% url 'SandalDetailfemme'  sandal_femme.id%} " class="btn btn-success">acheté</a>
+ <a  href="{% url 'infodetail24' sandal_femme.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+   <div class="titre">     <h1>Sandals pour Hommes</h1></div>
+
+  <section class="row">
+    {% for sandal_homme in sandals_homme %}
+
+    <div class="card col-3 carte" >
+      <img src="{{sandal_homme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{sandal_homme.nom}}</h5>
+        <p class="card-text">{{sandal_homme.description}}</p>
+        <a  href="{% url 'SandalDetailhomme'  sandal_homme.id %} " class="btn btn-success">acheté</a>
+       <a  href="{% url 'infodetail25' sandal_homme.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+
+
+
+
+{% endblock content %}

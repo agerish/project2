@@ -1,0 +1,80 @@
+{% extends "bas.html" %}
+{% block content %}
+
+<main class="container-fluid containere">
+   <div class="titre"> <h1>Basket mixt</h1></div>
+
+  <section class="row">
+    {% for basket in baskets %}
+
+    <div class="card col-3 carte" >
+      <img src="{{basket.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{basket.nom}}</h5>
+        <p class="card-text">{{basket.description}}</p>
+        <a  href="{% url 'basket' basket.id %} " class="btn btn-success">acheté</a>
+         <a  href="{% url 'infodetail4' basket.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+  <div class="titre"> <h1>Basket pour Femmes</h1></div>
+
+  <section class="row">
+    {% for basket_femme in baskets_femme %}
+
+    <div class="card col-3 carte" >
+      <img src="{{basket_femme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{basket_femme.nom}}</h5>
+        <p class="card-text">{{basket_femme.description}}</p>
+        <a  href="{% url 'basket_femme' basket_femme.id %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail5' basket_femme.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+<main class="container-fluid containere">
+  <div class="titre"> <h1>Basket pour Hommes</h1></div>
+
+  <section class="row">
+    {% for basket_homme in baskets_homme %}
+
+    <div class="card col-xs-6 carte" >
+      <img src="{{basket_homme.image.url}}" class="card-img-top" alt="card">
+      <div class="card-body">
+        <h5 class="card-title">{{basket_homme.nom}}</h5>
+        <p class="card-text">{{basket_homme.description}}</p>
+        <a  href="{% url 'basket_homme' basket_homme.id %} " class="btn btn-success">acheté</a>
+        <a  href="{% url 'infodetail6' basket_homme.id %} " class="btn btn-light">info</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </section>
+
+</main>
+
+
+
+
+
+
+
+{% endblock content %}

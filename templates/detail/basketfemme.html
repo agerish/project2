@@ -1,0 +1,101 @@
+{% extends 'bas.html' %}
+
+
+{% block content %}
+
+<style>
+
+.formulaire{
+  border: none solid pink;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+
+}
+label{
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form1{
+  width: 100%;
+  background-color: pink;
+  height: 50vh;
+  overflow-y: scroll;
+  border-radius: 30px/50px;
+}
+legend{
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;;
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid" style="width:100%;">
+  <div class="row">
+    <div class="col-6">
+     <div class="card" style="width:100% ; border-radius: 30px;
+     box-shadow: 6px 10px 10px pink;background-color: gold; " >
+      <div class="car-body">
+        <div class="card-img">
+          <img src="{{sandaldetailhomme.image.url}}" alt="imagecommande" width="100%">
+        </div>
+        <div class="card-title text-center" >
+          <h1> nom: {{sandaldetailhomme.nom}}</h1>
+          <h1> prix: {{sandadetaillhomme.prix}} FCFA</h1>
+        </div>
+      </div>
+     </div>
+    </div>
+ <legend class="titr"><h1>Remplissez le formulaire pour lancer la commande</h1></legend>
+    <div class="col-6 formulaire"  >
+      <form  method="post" class="form1">
+         {% csrf_token %}
+        <label for="nom">Nom: <input type="text" name="nom" id="nom"></label>
+        <label for="Prenom">Prenom: <input type="text" name="Prenom" id="Prenom"></label>
+        <label for="Tel">Tel: <input type="number" name="Tel" id="Tel"></label>
+        <label for="Adresse">Adresse:<input type="text" name="Adresse" id="Adresse"></label>
+        <label for="pays">Pays: <input type="text" name="pays" id="pays"></label>
+        <label for="ville">Ville: <input type="text" name="ville" id="ville"></label>
+        <label for="email">Email <input type="email" name="email" id="email"></label>
+        <label for="produit"> Produit:<input type="text" name="produit" id="produit" value='{{habits.nom}}' class='disabled'></label>
+        <label for="quantite"> quantité:<input type="number" name="quantite" id="quantite"></label>
+        <label for="message"><textarea name="message" id="message" cols="20" rows="10" placeholder="discuter du prix avec le fournissaire"></textarea></label>
+      <label > <input type="submit" value="commander" style="border-radius: 30px;" class="btn btn-success"></label>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+{% endblock %}
